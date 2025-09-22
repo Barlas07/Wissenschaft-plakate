@@ -4,85 +4,139 @@
   <meta charset="utf-8">
   <title>Wissenschaftliche Plakate</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(135deg, #6a11cb, #2575fc);
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #e8eaf0, #ffffff);
       margin: 0;
-      padding: 40px;
-      color: #fff;
+      padding: 50px 20px;
+      color: #333;
     }
+
     h1 {
       text-align: center;
-      margin-bottom: 50px;
-      font-size: 2.8rem;
-      font-weight: 800;
+      margin-bottom: 60px;
+      font-size: 3rem;
+      font-weight: 700;
       letter-spacing: 1px;
-      text-transform: uppercase;
+      color: #004aad;
     }
+
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 25px;
-      max-width: 1100px;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      max-width: 1200px;
       margin: 0 auto;
     }
+
     .card {
       background: #fff;
       color: #333;
-      border-radius: 18px;
-      box-shadow: 0 8px 18px rgba(0,0,0,0.25);
-      padding: 24px;
-      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      border-radius: 20px;
+      padding: 30px 25px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+      overflow: hidden;
     }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(120deg, #007bff, #00c6ff, #007bff);
+      transform: rotate(45deg);
+      opacity: 0.15;
+      pointer-events: none;
+    }
+
     .card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 12px 28px rgba(0,0,0,0.3);
+      transform: translateY(-8px) scale(1.02);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.12);
     }
+
     .card h2 {
-      font-size: 1.3rem;
-      margin-bottom: 12px;
+      font-size: 1.4rem;
+      margin-bottom: 15px;
       font-weight: 700;
-      color: #222;
+      color: #004aad;
     }
+
     .card p {
-      font-size: 0.95rem;
-      margin-bottom: 18px;
+      font-size: 1rem;
+      margin-bottom: 25px;
       color: #555;
-      line-height: 1.4;
+      line-height: 1.6;
     }
+
     .btn {
       display: inline-block;
       text-decoration: none;
-      padding: 10px 18px;
-      border-radius: 10px;
-      background: linear-gradient(135deg, #2575fc, #6a11cb);
+      padding: 12px 22px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #007bff, #00c6ff);
       color: #fff;
       font-weight: 600;
-      transition: opacity 0.25s ease;
+      font-size: 0.95rem;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
     }
+
     .btn:hover {
-      opacity: 0.9;
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2.5rem;
+      }
+      .card {
+        padding: 25px 20px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 2rem;
+      }
+      .card h2 {
+        font-size: 1.2rem;
+      }
+      .btn {
+        width: 100%;
+        text-align: center;
+      }
     }
   </style>
 </head>
 <body>
+
   <h1>Wissenschaftliche Plakate</h1>
+
   <div class="grid">
     <div class="card">
       <h2>Aus der Universitätsklinik für Kinderheilkunde und Jugendmedizin</h2>
       <p>Poster zu klinischen Arbeiten im Bereich der Kinder- und Jugendmedizin.</p>
       <a class="btn" href="https://github.com/Barlas07/Wissenschaft-plakate/blob/main/Aus%20der%20Universitätsklinik%20für%20Kinderheilkunde%20und%20Jugendmedizin.pdf" target="_blank">PDF öffnen</a>
     </div>
+
     <div class="card">
       <h2>Comprehensive Nursing Program for Children with Epilepsy</h2>
       <p>Randomisierte, kontrollierte Studie über ein umfassendes Pflegeprogramm für Kinder mit Epilepsie.</p>
       <a class="btn" href="https://github.com/Barlas07/Wissenschaft-plakate/blob/main/Comprehensive%20Nursing%20Program%20for%20Children%20with%20Epilepsy%20A%20Randomized%20Controlled%C2%A0Trial.pdf" target="_blank">PDF öffnen</a>
     </div>
+
     <div class="card">
       <h2>Zur Lebensqualität von Kindern und Jugendlichen mit Epilepsie</h2>
       <p>Untersuchung zur Lebensqualität von Kindern und Jugendlichen, die mit Epilepsie leben.</p>
       <a class="btn" href="https://github.com/Barlas07/Wissenschaft-plakate/blob/main/Zur%20Lebensqualita%CC%88t%20von%20Kindern%20und%20Jugendlichen%20mit%20Epilepsie.pdf" target="_blank">PDF öffnen</a>
     </div>
   </div>
+
 </body>
 </html>
